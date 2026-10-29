@@ -1,0 +1,16 @@
+clc;
+clear all;
+close all;
+b=[1];
+a=[1 -1];
+n=0:1:10;
+figure();
+stem(n);
+hold on;
+stem(impz(b,a,n));
+figure();
+stem(n);
+stem(filter(b,a,n));
+figure();
+stem(n);
+stem(freqz(b,a,n));
